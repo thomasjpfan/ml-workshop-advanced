@@ -11,8 +11,8 @@ class: title-slide
 @thomasjpfan<br>
 <a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github icon-left"></span></a>
 <a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter"></span></a>
-<a class="this-talk-link", href="https://github.com/thomasjpfan/ml-workshop-intermediate-advanced" target="_blank">
-This workshop on Github: github.com/thomasjpfan/ml-workshop-intermediate-advanced</a>
+<a class="this-talk-link", href="https://github.com/thomasjpfan/ml-workshop-advanced" target="_blank">
+This workshop on Github: github.com/thomasjpfan/ml-workshop-advanced</a>
 
 ---
 
@@ -77,7 +77,7 @@ class: title-slide, left
 @thomasjpfan<br>
 <a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github icon-left"></span></a>
 <a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter"></span></a>
-<a class="this-talk-link", href="https://github.com/thomasjpfan/ml-workshop-intermediate-advanced" target="_blank">
-This workshop on Github: github.com/thomasjpfan/ml-workshop-intermediate-advanced</a>
+<a class="this-talk-link", href="https://github.com/thomasjpfan/ml-workshop-advanced" target="_blank">
+This workshop on Github: github.com/thomasjpfan/ml-workshop-advanced</a>
 ]
 ]
