@@ -1,4 +1,5 @@
-# Advanced Machine Learning with scikit-learn: Text Data, Imbalanced Data, and Poisson Regression
+# Advanced Machine Learning with scikit-learn
+### Text Data, Imbalanced Data, and Poisson Regression
 
 *By Thomas J. Fan*
 
