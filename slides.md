@@ -32,9 +32,23 @@ class: chapter-slide
 
 # 1. Text Data
 
-.footnote-back[
+.footnote[
 [Back to Table of Contents](#table-of-contents)
 ]
+
+---
+
+- Example data
+- Text data
+- Bag of words
+- CounterVectorizer example
+- imdb move reviews
+- use logistic regression
+- stop words
+- infrequent words
+- n-grams
+- tfidf
+- words vs characters
 
 ---
 
@@ -43,9 +57,23 @@ class: chapter-slide
 
 # 2. Imbalanced Data
 
-.footnote-back[
+.footnote[
 [Back to Table of Contents](#table-of-contents)
 ]
+
+---
+
+- Sources of imbalance
+- roc curve
+- roc vs average_precision
+- resampling
+- imbalance-learn
+- undersampling
+- oversampling
+- compare pr and roc curve
+- class weight
+- balanced bagging
+- smote
 
 ---
 
@@ -54,9 +82,18 @@ class: chapter-slide
 
 # 3. Poisson Regression
 
-.footnote-back[
+.footnote[
 [Back to Table of Contents](#table-of-contents)
 ]
+
+---
+
+- What is generalized linear models
+- link functions
+- Focus on Poisson
+- Example notebook
+- Tree based regression
+- Example notebook
 
 ---
 
