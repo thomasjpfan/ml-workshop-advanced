@@ -36,7 +36,7 @@ class: chapter-slide
 [Back to Table of Contents](#table-of-contents)
 ]
 
----
+???
 
 - Example data
 - Text data
@@ -61,7 +61,7 @@ class: chapter-slide
 [Back to Table of Contents](#table-of-contents)
 ]
 
----
+???
 
 - Sources of imbalance
 - roc curve
@@ -86,7 +86,7 @@ class: chapter-slide
 [Back to Table of Contents](#table-of-contents)
 ]
 
----
+???
 
 - What is generalized linear models
 - link functions
