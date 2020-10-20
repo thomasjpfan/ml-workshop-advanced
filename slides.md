@@ -32,7 +32,7 @@ class: chapter-slide
 
 # 1. Text Data
 
-.footnote[
+.footnote-back[
 [Back to Table of Contents](#table-of-contents)
 ]
 
@@ -57,7 +57,7 @@ class: chapter-slide
 
 # 2. Imbalanced Data
 
-.footnote[
+.footnote-back[
 [Back to Table of Contents](#table-of-contents)
 ]
 
@@ -82,7 +82,7 @@ class: chapter-slide
 
 # 3. Poisson Regression
 
-.footnote[
+.footnote-back[
 [Back to Table of Contents](#table-of-contents)
 ]
 
