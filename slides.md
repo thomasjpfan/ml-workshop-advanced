@@ -102,7 +102,9 @@ This independent, B&W, DV feature consistently shocks, amazes and amuses with it
 
 # Bag of words
 
-![:scale 100%](images/bag_of_words.png)
+.center[
+![:scale 90%](images/bag_of_words.png)
+]
 
 ---
 
@@ -180,24 +182,6 @@ class: chapter-slide
 
 ---
 
-# Notes
-
-???
-
-- Example data
-- Text data
-- Bag of words
-- CounterVectorizer example
-- imdb move reviews
-- use logistic regression
-- stop words
-- infrequent words
-- n-grams
-- tfidf
-- words vs characters
-
----
-
 name: imbalanced
 class: chapter-slide
 
@@ -207,19 +191,205 @@ class: chapter-slide
 [Back to Table of Contents](#table-of-contents)
 ]
 
-???
+---
 
-- Sources of imbalance
-- roc curve
-- roc vs average_precision
-- resampling
-- imbalance-learn
-- undersampling
-- oversampling
-- compare pr and roc curve
-- class weight
-- balanced bagging
-- smote
+class: middle
+
+# What is imbalanced data?
+
+- Cost are different between classes
+- Data is imbalanced
+- Some datasets have very few positive classes
+
+---
+
+# Different Cost between classes
+
+.g[
+.g-8[
+.smaller-x[
+```py
+y_pred = log_reg.predict(X_test)
+print(classification_report(y_test, y_pred))
+```
+
+```
+              precision    recall  f1-score   support
+
+       False       0.99      1.00      0.99      2731
+        True       0.75      0.37      0.49        65
+
+    accuracy                           0.98      2796
+   macro avg       0.87      0.68      0.74      2796
+weighted avg       0.98      0.98      0.98      2796
+```
+
+```py
+y_pred_20 = log_reg.predict_proba(X_test)[:, 1] > 0.25
+print(classification_report(y_test, y_pred_20))
+```
+
+```
+              precision    recall  f1-score   support
+
+       False       0.99      0.99      0.99      2731
+        True       0.63      0.55      0.59        65
+
+    accuracy                           0.98      2796
+   macro avg       0.81      0.77      0.79      2796
+weighted avg       0.98      0.98      0.98      2796
+```
+]
+]
+.g-4[
+$$
+\text{precision} = \frac{TP}{TP + FP}
+$$
+
+$$
+\text{recall} = \frac{TP}{TP + FN}
+$$
+]
+]
+
+---
+
+class: chapter-slide
+
+# Notebook 📕!
+## notebooks/02-imbalanced-data.ipynb
+
+---
+
+# Resampling
+
+![:scale 60%](images/resampling_approches.png)
+
+---
+
+# sklearn Pipelines - Unable to handle sampling
+
+![](images/pipeline.svg)
+
+---
+
+# Imbalanced-learn
+
+[https://imbalanced-learn.org/stable/](https://imbalanced-learn.org/stable/)
+
+- Extends scikit-learn API
+- Defines samplers
+
+## Defines pipeline to handle sampling
+
+```py
+from imblearn.pipeline import make_pipeline as make_imb_pipeline
+
+from imblearn.under_sampling import RandomUnderSampler
+from imblearn.over_sampling import RandomOverSampler
+```
+
+---
+
+# Sampler Objects
+
+To resample a dataset:
+
+```py
+data_resampled, targets_resampled = obj.sample(data, targets)
+```
+
+Fitting and sampling done in one line:
+
+```py
+data_resampled, targets_resampled = obj.fit_sample(data, targets)
+```
+
+---
+
+class: chapter-slide
+
+# Notebook 📕!
+## notebooks/02-imbalanced-data.ipynb
+
+---
+
+# Class-weights
+
+- Re-weight the loss functions
+- Native to scikit-learn for most models
+- Same effect as over-sampling, but keeps the dataset size the same
+
+---
+
+# Class-weights
+## Linear models
+
+- Loss of a given sample is weighted inversely proportional to class frequencies
+
+```py
+LogisticRegression(class_weight='balanced')
+```
+
+## Tree models
+
+- When deciding where to split, the `criterion` is weighted inversely proportional to class frequencies
+
+```py
+DecisionTreeClassifier(class_weight='balanced')
+```
+
+---
+
+class: chapter-slide
+
+# Notebook 📕!
+## notebooks/02-imbalanced-data.ipynb
+
+---
+
+class: middle
+
+# Balanced Bagging
+
+- Random under sampling for each instance in the ensemble
+
+```py
+from imblearn.ensemble import BalancedRandomForestClassifier
+
+balanced_rf = BalancedRandomForestClassifier(random_state=0)
+balanced_rf.fit(X_train, y_train)
+```
+
+---
+
+class: chapter-slide
+
+# Notebook 📕!
+## notebooks/02-imbalanced-data.ipynb
+
+---
+
+# Synthetic Minority Oversampling Technique
+## SMOTE
+
+- Adds synthetic interpolated data to the minority class
+- For each sample in minority class:
+    - Pick random neighbor from k neighbors.
+    - Pick point on line connecting the two uniformly
+
+---
+
+# Generated Data with SMOTE
+
+![](notebooks/images/smote_generated.png)
+
+---
+
+class: chapter-slide
+
+## Notebook 📕!
+### notebooks/02-imbalanced-data.ipynb
 
 ---
 
