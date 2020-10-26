@@ -143,7 +143,7 @@ class: chapter-slide
 - Tries to keep words together
 - "really tall" and "not tall" has different contexts
 
-![](images/single_words.png)
+![:scale 90%](images/single_words.png)
 
 ---
 
@@ -474,7 +474,7 @@ from sklearn.linear_model import GammaRegressor
 
 - Predictive maintenance:
     - number of production interruption events per year (Poisson)
-    - duration of interruption (Gamma),
+    - duration of interruption (Gamma)
 
 ---
 
@@ -482,19 +482,6 @@ class: chapter-slide
 
 # Notebook 📘!
 ## notebooks/03-poisson-regression.ipynb
-
----
-
-# Notes
-
-???
-
-- What is generalized linear models
-- link functions
-- Focus on Poisson
-- Example notebook
-- Tree based regression
-- Example notebook
 
 ---
 
