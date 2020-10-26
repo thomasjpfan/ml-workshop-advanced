@@ -418,6 +418,91 @@ class: chapter-slide
 [Back to Table of Contents](#table-of-contents)
 ]
 
+---
+
+# Generalized Linear Models
+
+Predicted values $\hat{y}$ are linked to a linear combination of $X$ via an
+inverse link function:
+
+$$
+\hat{y}(w, X) = h(Xw)
+$$
+
+The minimization problem becomes:
+
+$$
+\min_{w}\frac{1}{2n}\sum_i d(y_i, \hat{y}_i) + \frac{\alpha}{2} ||w||_2
+$$
+
+- $n$ is the number of samples
+- $\alpha$ is the L2 regularization penalty,
+- $d(y_i, \hat{y}_i)$ is the unit deviance
+
+---
+
+# Unit Deviances
+
+![](images/glm_unit_deviance.png)
+
+![:scale 100%](images/poisson_gamma_tweedie_distributions.png)
+
+---
+
+class: middle
+
+# Scikit-learn supports GLMS!
+
+`TweedieRegressor` implements GLM for the Tweedie distribution with a `power` parameter
+```py
+from sklearn.linear_model import TweedieRegressor
+```
+
+`power=0`: Normal distribution: Use `Ridge`, `ElasticNet`, etc.
+
+---
+
+class: middle
+
+# Convenience estimators GLM
+
+Same as `TweedieRegressor(power=1, link='log')`
+```py
+from sklearn.linear_model import PoissonRegressor
+```
+
+Same as `TweedieRegressor(power=2, link='log')`
+```py
+from sklearn.linear_model import GammaRegressor
+```
+
+---
+
+# Examples of use cases for GLMS
+
+- Agriculture / weather modeling:
+    - number of rain events per year (Poisson)
+    - amount of rainfall per event (Gamma)
+
+- Risk modeling / insurance policy pricing:
+    -  number of claim events / policyholder per year (Poisson)
+    - cost per event (Gamma)
+
+- Predictive maintenance:
+    - number of production interruption events per year (Poisson)
+    - duration of interruption (Gamma),
+
+---
+
+class: chapter-slide
+
+# Notebook 📘!
+## notebooks/03-poisson-regression.ipynb
+
+---
+
+# Notes
+
 ???
 
 - What is generalized linear models
