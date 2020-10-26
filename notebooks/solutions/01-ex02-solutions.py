@@ -4,7 +4,4 @@ rf_pipe = Pipeline([
 ])
 
 rf_pipe.fit(text_train, y_train)
-
-rf_pipe.score(text_train, y_train)
-
 rf_pipe.score(text_val, y_val)
