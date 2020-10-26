@@ -404,6 +404,25 @@ class: chapter-slide
 
 ---
 
+class: middle
+
+# Relationship to Statistics
+
+.g[
+.g-6[
+## Statistics
+- model first
+- inference emphasis
+]
+.g-6[
+## Machine learning
+- data first
+- prediction emphasis
+]
+]
+
+---
+
 # Generalized Linear Models
 
 Predicted values $\hat{y}$ are linked to a linear combination of $X$ via an
