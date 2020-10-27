@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+notebooks/data/train
+
 # C extensions
 *.so
 
