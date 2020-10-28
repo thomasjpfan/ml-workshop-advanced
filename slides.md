@@ -172,7 +172,7 @@ $$
 
 - $\text{tf}(t, d)$ = The count of term $t$ in document $d$.
 - $n_d$ = total number of documents
-- $\text{df}(d, t)$ = number of documents containing term $r$
+- $\text{df}(d, t)$ = number of documents containing term $t$
 
 - scikit-learn divides each row by its length (L2 normalization)
 
@@ -320,6 +320,8 @@ class: chapter-slide
 ## notebooks/02-imbalanced-data.ipynb
 
 ---
+
+class: middle
 
 # Class-weights
 
