@@ -280,6 +280,8 @@ class: chapter-slide
 
 ---
 
+class: middle
+
 # Imbalanced-learn
 
 [https://imbalanced-learn.org/stable/](https://imbalanced-learn.org/stable/)
