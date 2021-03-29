@@ -287,7 +287,9 @@ class: chapter-slide
 - Extends scikit-learn API
 - Defines samplers
 
-## Defines pipeline to handle sampling
+---
+
+# Defines pipeline to handle sampling
 
 ```py
 from imblearn.pipeline import make_pipeline as make_imb_pipeline
@@ -296,20 +298,10 @@ from imblearn.under_sampling import RandomUnderSampler
 from imblearn.over_sampling import RandomOverSampler
 ```
 
----
-
-# Sampler Objects
-
-To resample a dataset:
-
-```py
-data_resampled, targets_resampled = obj.sample(data, targets)
-```
-
 Fitting and sampling done in one line:
 
 ```py
-data_resampled, targets_resampled = obj.fit_sample(data, targets)
+data_resampled, targets_resampled = obj.fit_resample(data, targets)
 ```
 
 ---
@@ -516,89 +508,6 @@ from sklearn.linear_model import GammaRegressor
 ![:scale 120%](images/calibration_regression.png)
 ]
 ]
-
----
-
-# Permutation Feature Importance 👑 (Pt 1)
-
-```py
-X_train = [[0, 1, 2],
-           [1, 2, 3],
-           [2, 1, 4],
-           [3, 1, 9],
-           [4, 3, 1]]
-y_train = [1, 0, 1, 1, 0]
-
-model.f!t(X_train, y_train)
-model.score(X_train, y_train)
-# 0.90
-```
-
----
-
-# Permutation Feature Importance 👑 (Pt 2)
-
-```py
-X_train_perm_1 = [
-    [1, 1, 2],
-    [0, 2, 3],
-    [2, 1, 4],
-    [4, 1, 9],
-    [3, 3, 1]
-]
-model.score(X_train_perm_1, y_train)
-# 0.70
-```
-
----
-
-# Permutation Feature Importance 👑 (Pt 3)
-
-```py
-X_train_perm_2 = [
-    [1, 1, 2],
-    [3, 2, 3],
-    [4, 1, 4],
-    [2, 1, 9],
-    [0, 3, 1]
-]
-model.score(X_train_perm_1, y_train)
-# 0.73
-```
-
----
-
-# Permutation Feature Importance 👑 (Pt 4)
-
-```py
-model.score(X_train_perm_3, y_train)
-# 0.80
-```
-
-- Remember: `model.score(X_train, y_train) = 0.90`
-- permutation feature importance for the 1st feature:
-
-```py
-[0.90 - 0.70, 0.90 - 0.73, 0.90 - 0.80]
-# [0.20, 0.17, 0.10]
-```
-
----
-
-# Permutation Feature Importance 👑 (Pt 5)
-
-```py
-from sklearn.inspection import permutation_importance
-
-result = permutation_importance(model, X, y, n_repeats=3)
-
-result['importances']
-# [[0.20, 0.17, 0.10], [0.5, 0.4, 0.6], ...]
-result['importances_mean']
-# [ 0.157, 0.5, ...]
-result['importances_std']
-# [0.0419 0.0816, ...])
-```
 
 ---
 
