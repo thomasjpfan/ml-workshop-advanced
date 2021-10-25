@@ -1,0 +1,4 @@
+scikit-learn==1.0.*
+seaborn==0.11.2
+pandas
+imbalanced-learn==0.8.*
