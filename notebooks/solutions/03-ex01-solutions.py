@@ -1,4 +1,3 @@
-from sklearn.experimental import enable_hist_gradient_boosting
 from sklearn.ensemble import HistGradientBoostingRegressor
 
 hist = HistGradientBoostingRegressor(random_state=42)

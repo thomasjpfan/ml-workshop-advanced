@@ -1,6 +1,7 @@
 from sklearn.datasets import fetch_20newsgroups
+
 categories = [
-    'alt.atheism',
+    'comp.sys.mac.hardware',
     'sci.space',
 ]
 remove = ('headers', 'footers', 'quotes')
@@ -30,7 +31,8 @@ log_reg_tfid.score(X_train, y_train)
 
 log_reg_tfid.score(X_test, y_test)
 
-feature_names = log_reg_tfid["vectorizer"].get_feature_names()
+feature_names = log_reg_tfid[-1].get_feature_names_out()
 
 fig, ax = plt.subplots(figsize=(15, 6))
 plot_important_features(log_reg_tfid["classifier"].coef_.ravel(), feature_names, top_n=20, ax=ax)
+
