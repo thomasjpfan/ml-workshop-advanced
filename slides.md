@@ -110,7 +110,7 @@ This independent, B&W, DV feature consistently shocks, amazes and amuses with it
 # Bag of words
 
 .center[
-![:scale 90%](images/bag_of_words.png)
+![:scale 90%](images/countvectorizer.png)
 ]
 
 ---
@@ -150,7 +150,7 @@ class: chapter-slide
 - Tries to keep words together
 - "really tall" and "not tall" has different contexts
 
-![:scale 90%](images/single_words.png)
+![:scale 90%](images/countvectorizer-ngrams.png)
 
 ---
 
@@ -274,7 +274,8 @@ class: chapter-slide
 
 ---
 
-# sklearn Pipelines - Unable to handle sampling
+# scikit-learn Pipelines
+### Unable to handle sampling
 
 ![](images/pipeline.svg)
 
@@ -500,7 +501,7 @@ from sklearn.linear_model import GammaRegressor
 
 ---
 
-# Calibration
+# Calibration for Regressors
 
 .g.g-middle[
 .g-6[

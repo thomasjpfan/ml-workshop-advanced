@@ -1,15 +1,13 @@
 from sklearn.ensemble import RandomForestClassifier
 
-rf = RandomForestClassifier(random_state=0, n_jobs=-1)
-rf.fit(X_train, y_train)
+rfc = RandomForestClassifier(random_state=42, max_depth=3)
 
-rf.score(X_test, y_test)
+rfc.fit(X_train, y_train)
 
-rf_feature_importance = rf.feature_importances_
+rfc.score(X_test, y_test)
 
-top_rf_importance_argsort = rf_feature_importance.argsort()
+rfc_feature_importances = rfc.feature_importances_
 
-top_20 = top_rf_importance_argsort[-20:]
+rf_top_15 = rfc_feature_importances.argsort()[-20:]
 
-top_rf_important_features = np.array(feature_names)[top_20]
-top_rf_important_features
+feature_names[rf_top_15]
