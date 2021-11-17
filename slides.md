@@ -110,7 +110,7 @@ This independent, B&W, DV feature consistently shocks, amazes and amuses with it
 # Bag of words
 
 .center[
-![:scale 90%](images/countvectorizer.png)
+![:scale 90%](images/countvectorizer.svg)
 ]
 
 ---
@@ -150,7 +150,7 @@ class: chapter-slide
 - Tries to keep words together
 - "really tall" and "not tall" has different contexts
 
-![:scale 90%](images/countvectorizer-ngrams.png)
+![:scale 90%](images/countvectorizer-ngrams.svg)
 
 ---
 
