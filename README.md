@@ -61,7 +61,7 @@ This should open a browser window with the `jupterlab` interface.
 
 If you have any issues with installing `conda` or running `jupyter` on your local computer, then you can run the notebooks on Google's Colab:
 
-1. [Model Evaluation](https://colab.research.google.com/github/thomasjpfan/ml-workshop-advanced/blob/master/notebooks/01-text-data.ipynb)
+1. [Text Data](https://colab.research.google.com/github/thomasjpfan/ml-workshop-advanced/blob/master/notebooks/01-text-data.ipynb)
 2. [Imbalanced data](https://colab.research.google.com/github/thomasjpfan/ml-workshop-advanced/blob/master/notebooks/02-imbalanced-data.ipynb)
 3. [Poisson regression](https://colab.research.google.com/github/thomasjpfan/ml-workshop-advanced/blob/master/notebooks/03-poisson-regression.ipynb)
 
