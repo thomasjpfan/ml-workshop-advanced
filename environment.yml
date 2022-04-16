@@ -8,4 +8,4 @@ dependencies:
   - seaborn=0.11.2
   - pandas
   - jupyterlab=3.1.*
-  - imbalanced-learn=0.8.*
+  - imbalanced-learn=0.9.*
