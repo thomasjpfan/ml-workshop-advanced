@@ -5,6 +5,4 @@ rfc_pipe = Pipeline([
 
 rfc_pipe.fit(text_train, y_train)
 
-rfc_pipe.score(text_train, y_train)
-
 rfc_pipe.score(text_test, y_test)

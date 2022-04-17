@@ -8,6 +8,6 @@ rfc.score(X_test, y_test)
 
 rfc_feature_importances = rfc.feature_importances_
 
-rf_top_15 = rfc_feature_importances.argsort()[-20:]
+rf_top_20 = rfc_feature_importances.argsort()[-20:]
 
-feature_names[rf_top_15]
+feature_names[rf_top_20]

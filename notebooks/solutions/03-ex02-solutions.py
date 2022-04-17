@@ -1,6 +1,5 @@
 poisson_reg = Pipeline([
     ("preprocessor", linear_model_preprocessor),
-    ("scalar", MaxAbsScaler()),
     ("reg", PoissonRegressor(alpha=1e-4)),
 ])
 
